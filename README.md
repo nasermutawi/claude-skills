@@ -23,6 +23,23 @@ One place for the skills I use across projects. Each folder under `.claude/skill
 | ask-sonner | The Sonner toast library for React | emilkowalski/skills |
 | animate-expo | Animations in React Native / Expo (for a future native app) | emilkowalski/skills |
 | write-swift | Modern Swift (for a future native iPhone app) | emilkowalski/skills |
+| impeccable | Full design toolkit: critique, audit, polish, bolder, quieter, typeset, layout, delight, harden, onboard; also native iPhone and Android screens and design-system files. Its command-line tool downloads a program from the author's GitHub on first use (only needed for automated scans and live mode) | [pbakaus/impeccable](https://github.com/pbakaus/impeccable) (Apache 2.0) |
+| taste-skill | Art direction for websites and landing pages, from a study of 247 award-winning sites. Not for app screens | [Leonxlnx/taste-skill](https://github.com/Leonxlnx/taste-skill) (MIT) |
+
+### Business logic and tests
+
+From [meirm/reverse-engineering-skill](https://github.com/meirm/reverse-engineering-skill) (MIT). For requirements and tests, not design.
+
+| Skill | What it's for |
+| --- | --- |
+| bdd-orchestrator | Runs the whole flow below, step by step, for one feature |
+| tailor-bdd-skills-for-project | Sets the other skills up for a repo: where the business-logic docs live, the terms it uses |
+| reverse-engineering-business-logic | Works out what the code actually does: rules, workflows, states |
+| validate-business-logic-against-code | Checks written rules against the code: implemented, partly, contradicted or missing |
+| analyze-business-logic-gaps | Finds missing, vague or contradictory rules |
+| refine-business-logic-for-implementation | Rewrites vague rules into exact, testable ones |
+| derive-acceptance-criteria-from-business-logic | Turns rules into Given/When/Then acceptance criteria and tasks |
+| generate-tests-from-business-logic | Turns rules into test cases |
 
 ## Adding skills
 
