@@ -41,6 +41,15 @@ From [meirm/reverse-engineering-skill](https://github.com/meirm/reverse-engineer
 | derive-acceptance-criteria-from-business-logic | Turns rules into Given/When/Then acceptance criteria and tasks |
 | generate-tests-from-business-logic | Turns rules into test cases |
 
+### Melody (household app)
+
+Written for Melody, Nas and Sandi's household app (repo `nasermutawi/hometest`). Each runs in the Claude desktop app with Claude in Chrome.
+
+| Skill | What it's for |
+| --- | --- |
+| melody-shopping-run | The price hunt: reads the cart from the Home – Groceries Sheet, compares the stores, fills the best basket, writes results back, stops at checkout, and learns into the Sheet's Playbook tab |
+| melody-store-basket | One store, one list: check prices and pack sizes or fill the cart (Kibsons, Deliveroo HOP, Spinneys). Used by the run, or alone |
+
 ## Adding skills
 
 - **From another repo:** copy its skill folders into `.claude/skills/`, keep its licence file in each folder, and add a row above.
