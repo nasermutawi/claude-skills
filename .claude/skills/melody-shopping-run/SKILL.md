@@ -57,7 +57,8 @@ This skill is the conductor. The work inside each store is done by the
 4. **What we've learned**: the Playbook tab. Load every `Rule` line for each store. List the
    `Question` lines: in supervised mode, ask them now, before starting (one message, all
    questions, each with options), and record the answers as in step 6.
-5. **Which stores**: Kibsons, Deliveroo HOP, Spinneys (more as Store rules grows). In
+5. **Which stores**: Kibsons, Deliveroo HOP, Spinneys (on Deliveroo, not spinneys.com)
+   (more as Store rules grows). In
    unattended mode, use only stores with a Playbook Rule `Unattended OK` logged by
    my Claude (Naser's and Sandi's computers are signed in separately).
 
@@ -78,6 +79,8 @@ Don't let one store stop the run.
    A store missing items isn't cheaper; show its total *and* what's missing.
 3. Consider one **split** (two stores) only if one store lacks something we need (egg
    whites at HOP) or the split saves more than AED 20 after both fees and minimums.
+   HOP and Spinneys are both shops inside Deliveroo, which holds one basket at a time, so
+   never split between those two.
 4. Pinned stores win: a cart line or Favourite with "only from <store>" goes there.
 5. The **winner** is the cheapest real total that covers everything (or everything that
    any store sells). Close call (within AED 5)? Prefer the store we used last (Order

@@ -93,6 +93,15 @@ Sheet's Store rules tab, and do the first run supervised.
 ## Store pages
 What was known when this skill was last tuned up. The Playbook tab is newer.
 
+### Deliveroo shops (HOP and Spinneys)
+- One Deliveroo account, one sign-in for both.
+- Deliveroo is expected to hold one basket at a time: adding from another shop asks to
+  clear the current basket. Never accept that if the basket holds things Melody didn't
+  add. Confirm how it behaves on the first supervised run and add it to the Playbook.
+- So check each shop one after the other, and empty what you added before moving on.
+- In fill mode only one Deliveroo shop can be filled. A split of HOP + Spinneys can't be
+  filled at once; a split of Kibsons + one Deliveroo shop can.
+
 ### Kibsons
 
 - **Start at**: kibsons.com (confirm the exact address on the first supervised run and
@@ -131,14 +140,15 @@ Deliveroo's own grocery store, inside Deliveroo. Store name in the Sheet: `Deliv
   AED 105.80 after credit.
 - **Last checked**: 2026-11-18 (by hand, before this skill).
 
-### Spinneys
+### Spinneys (on Deliveroo)
 
-- **Start at**: spinneys.com, UAE store (confirm the exact address on the first
-  supervised run and add it to the Playbook).
-- **Sign-in**: the household's account, if there is one; unknown so far. Ask on the
-  first supervised run.
-- **Delivery**: fee and minimum unknown. Read them on the first run and add them to the
-  Store rules tab.
+We order Spinneys through Deliveroo, not spinneys.com: it's a shop inside Deliveroo, like
+HOP. Same Deliveroo account and sign-in. See "Deliveroo shops" below.
+
+- **Start at**: deliveroo.ae, signed in, delivering to the JVC home, then the Spinneys
+  shop (confirm the exact page on the first supervised run and add it to the Playbook).
+- **Delivery**: its own fee and minimum on Deliveroo, which may differ from HOP. Read them
+  in the cart on the first run and add them to the Store rules tab.
 - **Offers**: none known yet.
 - **Known gaps**: oat balls (stock varies).
 - **Avoid for**: eggs, roughly double the price elsewhere. Still price them, so the
