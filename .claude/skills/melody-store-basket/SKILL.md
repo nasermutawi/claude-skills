@@ -94,13 +94,20 @@ Sheet's Store rules tab, and do the first run supervised.
 What was known when this skill was last tuned up. The Playbook tab is newer.
 
 ### Deliveroo shops (HOP and Spinneys)
-- One Deliveroo account, one sign-in for both.
-- Deliveroo is expected to hold one basket at a time: adding from another shop asks to
-  clear the current basket. Never accept that if the basket holds things Melody didn't
-  add. Confirm how it behaves on the first supervised run and add it to the Playbook.
-- So check each shop one after the other, and empty what you added before moving on.
-- In fill mode only one Deliveroo shop can be filled. A split of HOP + Spinneys can't be
-  filled at once; a split of Kibsons + one Deliveroo shop can.
+- One Deliveroo account, one sign-in for both. Always check **HOP first**, then Spinneys:
+  HOP is where we order more often.
+- Not known yet: does the Deliveroo website keep a separate basket per shop (the phone app
+  may), or only one basket? Find out on the first supervised run, without clearing
+  anything: add one item at HOP, open Spinneys, add one item, and see whether Deliveroo
+  asks to clear the HOP basket. If it asks, cancel. Write the answer to the Playbook
+  (Store `Deliveroo`, Area `cart`).
+- **Separate baskets**: check both shops and leave each basket as it is.
+- **One basket**: check HOP, note exactly what you added, clear only that, check Spinneys.
+  Once the run picks the winner, stay on Spinneys if it won, or clear what you added at
+  Spinneys and refill HOP if HOP won. Never clear a basket that holds items Melody
+  didn't add: stop and ask (supervised) or skip Spinneys (unattended).
+- In fill mode with one basket, only one Deliveroo shop can be filled, so a split of HOP
+  + Spinneys can't be filled at once; a split of Kibsons + one Deliveroo shop can.
 
 ### Kibsons
 
