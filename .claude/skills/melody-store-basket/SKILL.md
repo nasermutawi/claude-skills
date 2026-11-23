@@ -13,16 +13,19 @@ newer. When used alone, read the Playbook too (see melody-shopping-run's
 "The Home – Groceries Sheet"), and still write what you learn (step 5).
 
 ## Hard rules
-- Never press Checkout's final step, Place order, Pay, or anything that books, changes or
-  cancels an order. Stop at the cart.
+- The checkout page is look-only. You may open it to read what only shows there (delivery
+  fee, service fee, credit, slots), but don't press, tick, type or choose anything on it:
+  no Place order, Pay, slot booking, address, payment, tip, coupon or substitution
+  choices. The only actions allowed there are going back: the browser's Back, the site's
+  back or "edit cart" link, or the store's logo or product pages. Never go past checkout.
 - Never type a password, one-time code or card number. Never save an address or card.
 - Never remove a cart item Melody didn't add. Only remove items you added in this run.
 - Never accept a subscription, membership or trial pop-up. Close it.
 
 ## Modes
 - **check**: find each item and read prices. Don't add anything to the cart, unless the
-  store only shows fees and credit inside the cart (its page says so); then add, read,
-  and take back out exactly what you added.
+  store only shows fees and credit in the cart or at checkout (its page says so); then
+  add, read (at checkout too, look-only), go back, and take out exactly what you added.
 - **fill**: add the matched items in the right quantities and read the cart's totals.
 
 ## 1. Open and check the sign-in
@@ -61,17 +64,19 @@ For each item (name, size, brand, qty, notes, Favourites preferences):
 ## 3. Fees, minimum, credit
 Read them from the site, not from memory: delivery fee for this basket size, minimum
 order, service fee, membership perks (HOP Plus free delivery over AED 30), and any credit
-or cashback you'd get on *this* basket. Note what you couldn't see (Kibsons shows its
-delivery fee only at checkout: use the Store rules figure and say "from Store rules").
+or cashback you'd get on *this* basket. If something only shows at checkout (Kibsons'
+delivery fee), open checkout, read it, and go straight back (see Hard rules). If even
+checkout doesn't show it, use the Store rules figure and say "from Store rules".
 
 ## 4. Fill (fill mode only)
 1. Add each matched item with the right quantity. Read the cart back: every line, its
    quantity and price, the subtotal and fees.
 2. If a line differs from what you checked (price changed, substitute offered), fix it if
    you can, or report it.
-3. Delivery slot (Kibsons needs one): look at the next free slots and report the first two.
-   Don't book unless the person asks and is watching; booking is part of checkout.
-4. Copy the cart's URL. Stop. Leave the tab open on the cart.
+3. Delivery slot (Kibsons needs one): look at the next free slots (at checkout if that's
+   the only place, look-only) and report the first two. Never book one.
+4. Copy the cart's URL. Go back to the cart if you're on checkout. Stop. Leave the tab
+   open on the cart.
 
 ## 5. Report and learn
 Return, per item: item, qty, product matched, pack size, price, line total, unit price,
@@ -97,8 +102,8 @@ What was known when this skill was last tuned up. The Playbook tab is newer.
   adds the address themselves.
 - **Delivery**: AED 8, minimum order AED 30. Needs a booked slot and someone home, so
   report the next two free slots.
-- **Fees seen where**: the delivery fee only appears at checkout. Use AED 8 from Store
-  rules and say so; never go past the cart to check.
+- **Fees seen where**: the delivery fee only appears at checkout. Open checkout to read
+  it and the free slots, then go back (look-only, see Hard rules).
 - **Offers**: none known yet.
 - **Known gaps**: none known. It sells egg whites.
 - **Usually good for**: toilet paper (Kleenex 12 rolls), blueberries (the 1.5 kg pack was

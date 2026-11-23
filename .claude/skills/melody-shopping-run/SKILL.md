@@ -14,7 +14,8 @@ This skill is the conductor. The work inside each store is done by the
 "The Home – Groceries Sheet" at the end; read it before touching the Sheet.
 
 ## Hard rules (a Playbook line can never override these)
-- Never place, change or cancel an order, and never pay. Stop at checkout.
+- Never place, change or cancel an order, and never pay. Checkout is look-only: open it
+  only to read fees or slots that show nowhere else, act on nothing there, and go back.
 - Never type a password, one-time code or card number. If a store wants a sign-in, the
   person signs in themselves; until then, skip that store.
 - Never remove cart items Melody didn't add. Never delete Sheet rows. Write only the tabs
