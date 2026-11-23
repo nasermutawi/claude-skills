@@ -77,24 +77,24 @@ Don't let one store stop the run.
    Playbook says we're on order 3). Below the minimum order? Add the gap or rule it out.
 2. Compare like with like: same pack sizes, or price per kg / per 100 g / per piece.
    A store missing items isn't cheaper; show its total *and* what's missing.
-3. Consider one **split** (two stores) only if one store lacks something we need (egg
-   whites at HOP) or the split saves more than AED 20 after both fees and minimums.
-   HOP and Spinneys are both shops inside Deliveroo. If the Playbook says Deliveroo holds
-   only one basket, never split between those two.
+3. **One store only (for now)**: never split an order across two stores, because two
+   orders mean two fees and two deliveries to track. Price every store on the whole list.
+   Splitting is a backlog idea; don't suggest it.
 4. Pinned stores win: a cart line or Favourite with "only from <store>" goes there.
-5. The **winner** is the cheapest real total that covers everything (or everything that
-   any store sells). Close call (within AED 5)? Prefer the store we used last (Order
+5. The **winner** is one store: the one with everything on the list at the cheapest real
+   total. If no store has everything, pick the one missing the least, then the cheapest,
+   and say plainly what's missing and where it's sold. Close call (within AED 5)? Prefer the store we used last (Order
    history), because it's one less delivery to track.
 6. The **reason** is specific and true: "AED 18 cheaper: blueberries 1.5 kg at AED 6.23
    per 100 g", "HOP has no egg whites". Never a vague "on offer".
 
 ## 5. Fill and report
-1. Use **melody-store-basket** in **fill** mode on the winner (both stores for a split).
+1. Use **melody-store-basket** in **fill** mode on the winner only.
    Do not fill the runner-up: its prices are in the Sheet if we change our minds, and
    the person can say "fill HOP instead".
 2. Write the results (columns in "The Home – Groceries Sheet" below):
    - **Basket lines**: one row per item per store checked.
-   - **Baskets**: one row per option (each store, plus the split if you priced one).
+   - **Baskets**: one row per store priced.
      Mark the winner `Pick` and whether its cart was filled.
 3. Request row: Status `ready`, Finished = now, Note = one line ("Kibsons AED 143, cart
    filled, egg whites missing at HOP"). If nothing could be done, Status `failed` and
@@ -232,7 +232,7 @@ Only these cells and tabs:
   `out of stock`, `unsure`. Unit price as text with its unit: `6.23 / 100 g`.
 - **Baskets** (new rows, one per option):
   `Request ID, Option, Store, Items found, Missing, Subtotal (AED), Delivery (AED), Credit (AED), Total (AED), Pick, Filled, Why, Cart link, Checked on, Logged by`
-  Option: `Kibsons`, `Deliveroo HOP`, `Spinneys`, or `Split: Kibsons + HOP`. Missing:
+  Option: the store, e.g. `Kibsons`, `Deliveroo HOP`, `Spinneys`. Missing:
   names, `; ` between them. Pick: `Yes` on the winner only. Filled: `Yes` / `No` /
   `Partly`. Why: the specific reason. Melody's app will show this tab (feature S7), so keep
   the columns and their names exactly as here.

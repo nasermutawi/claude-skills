@@ -106,8 +106,7 @@ What was known when this skill was last tuned up. The Playbook tab is newer.
   Once the run picks the winner, stay on Spinneys if it won, or clear what you added at
   Spinneys and refill HOP if HOP won. Never clear a basket that holds items Melody
   didn't add: stop and ask (supervised) or skip Spinneys (unattended).
-- In fill mode with one basket, only one Deliveroo shop can be filled, so a split of HOP
-  + Spinneys can't be filled at once; a split of Kibsons + one Deliveroo shop can.
+- Only one store is ever filled per run (the single winner), so at most one Deliveroo shop.
 
 ### Kibsons
 
