@@ -80,6 +80,7 @@ checkout doesn't show it, use the Store rules figure and say "from Store rules".
 
 ## 5. Report and learn
 Return, per item: item, qty, product matched, pack size, price, line total, unit price,
+the line total before the offer if the site shows a struck-through price (else blank),
 status (`found`, `swapped`, `not sold`, `out of stock`, `unsure`) and a note; plus
 subtotal, delivery, credit, total, minimum met or not, cart link, and any blocker.
 Then hand back lessons for the Playbook (or write them yourself when used alone):
