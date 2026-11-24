@@ -71,6 +71,9 @@ order, credit or cashback that applies, and any blocker.
 If a store hits a blocker, handle it (see "Blockers") and move on to the next store.
 Don't let one store stop the run.
 
+Before each store, re-read the request's Status. If it says `pulled back`, Nas or Sandi took
+the list back in the app: stop now (see "Pulled back" in step 5).
+
 ## 4. Decide
 1. For each store work out the **real total**: items found + delivery fee − credit or
    cashback you can actually get on this basket (not "after 3 orders" offers unless the
@@ -89,6 +92,11 @@ Don't let one store stop the run.
    per 100 g", "HOP has no egg whites". Never a vague "on offer".
 
 ## 5. Fill and report
+0. **Pulled back?** Re-read the request's Status one last time before filling or writing.
+   If it says `pulled back`, stop: fill nothing, write no Basket lines or Baskets rows, and
+   leave the Status as it is (the app set it). Any store cart you already touched stays as
+   it is; never empty it. In supervised mode say "They pulled the list back in Melody, so I
+   stopped." Then go to step 6 only if there's a lesson worth keeping.
 1. Use **melody-store-basket** in **fill** mode on the winner only.
    Do not fill the runner-up: its prices are in the Sheet if we change our minds, and
    the person can say "fill HOP instead".
@@ -212,7 +220,7 @@ The Drive connector can't edit cells, so writes go through the Sheet in Chrome:
 | Tab | What's in it |
 | --- | --- |
 | Settings | No header. Column A key, column B value. `baskets.runner` = whose Claude runs (Naser or Sandi; "Nas" = Naser). `baskets.after` = earliest time for a scheduled run (default 18:00). |
-| Requests | `ID, Status, Asked by, Asked on, Items, Started, Finished, Note`. The app adds a row on "Get prices" with Status `waiting`. Status: waiting → running → ready or failed. |
+| Requests | `ID, Status, Asked by, Asked on, Items, Started, Finished, Note, Saved (AED)`. The app adds a row on "Get prices" with Status `waiting`. Status: waiting → running → ready or failed (written by Claude); `pulled back` (the app took the list back: stop, see step 5), then `ordered` or `closed` once someone answers "Did you order it?" in the app. Claude never writes those three, nor Saved (AED). While a request is waiting, running or ready, the app locks the cart. |
 | Shopping list | The cart. `Item, Qty, Added by, Added on, 1st choice store, 2nd choice store, Notes, Status, Size, Brand, Item ID`. In the cart = Status blank, Needed or In basket. |
 | Items | The catalogue: `ID, Item, Size, Brand, Heart, Aisle, Added by, Added on`. Heart = a favourite. |
 | Favourites | `Item, Preferred brand / variant, 1st choice store, 2nd choice store, Acceptable substitute, Avoid`. |
@@ -227,15 +235,20 @@ Only these cells and tabs:
 - **Store rules**: update a store's fee, minimum or offer when today's site says otherwise,
   and add a dated note in Notes ("2026-11-22: delivery now AED 10").
 - **Basket lines** (new rows):
-  `Request ID, Store, Item, Qty, Product matched, Pack size, Price (AED), Line total (AED), Unit price, Status, Note, Checked on, Logged by`
+  `Request ID, Store, Item, Qty, Product matched, Pack size, Price (AED), Line total (AED), Unit price, Status, Note, Checked on, Logged by, Was (AED)`
   Status: `found`, `swapped` (a substitute, say which in Note), `not sold`,
   `out of stock`, `unsure`. Unit price as text with its unit: `6.23 / 100 g`.
+  Was (AED): the line total before an offer, only when the store shows one (the app strikes
+  it through and counts the difference as a saving). Blank otherwise.
+  Note on a swap: short and plain, it's shown when they tap "Alt" ("the 1 kg was out").
 - **Baskets** (new rows, one per option):
-  `Request ID, Option, Store, Items found, Missing, Subtotal (AED), Delivery (AED), Credit (AED), Total (AED), Pick, Filled, Why, Cart link, Checked on, Logged by`
+  `Request ID, Option, Store, Items found, Missing, Subtotal (AED), Delivery (AED), Credit (AED), Total (AED), Pick, Filled, Why, Cart link, Checked on, Logged by, Saved (AED)`
   Option: the store, e.g. `Kibsons`, `Deliveroo HOP`, `Spinneys`. Missing:
   names, `; ` between them. Pick: `Yes` on the winner only. Filled: `Yes` / `No` /
-  `Partly`. Why: the specific reason. Melody's app will show this tab (feature S7), so keep
-  the columns and their names exactly as here.
+  `Partly`. Why: the specific reason, one or two short sentences (it shows under the
+  receipt). Saved (AED) is optional: leave it blank and the app works it out as credit plus
+  offers (Was minus line total). Melody's app shows this tab as the Ready screen (feature
+  S7), so keep the columns and their names exactly as here.
 - **Playbook** (new rows, or Status changes on existing rows):
   `Store, Area, Lesson, Status, Since, Last seen, Logged by`
   Store: a store name, or `All`. Area: `sign-in`, `search`, `match`, `cart`, `fees`,
